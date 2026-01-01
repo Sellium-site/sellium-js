@@ -2,7 +2,7 @@ import { SelliumClient } from "../src/index"
 
 
 const client = new SelliumClient({
-    baseUrl: "https://authy.site/api/v1",
+    baseUrl: "https://sellium.site/api/v1",
     apiKey: "YOUR_API_KEY",
     storeId: "YOUR_STORE_ID"
 });
