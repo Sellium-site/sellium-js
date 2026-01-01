@@ -1,0 +1,43 @@
+{
+  "name": "@sellium/sdk",
+  "version": "0.1.0",
+  "description": "Official TypeScript/JavaScript SDK for the Sellium API.",
+  "license": "MIT",
+  "author": "Sellium",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sellium-site/sellium-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sellium-site/sellium-js/issues"
+  },
+  "homepage": "https://github.com/Sellium-site/sellium-js#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "node -e \"console.log('No lint configured (optional)')\""
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.5.4"
+  }
+}
